@@ -1,6 +1,19 @@
 import 'package:bird_project/db_bird/db_bird.dart';
-import 'package:bird_project/router/bird_names.dart';
-import 'package:bird_project/router/bird_pages.dart';
+import 'package:bird_project/pages/bird_first/bird_first_binding.dart';
+import 'package:bird_project/pages/bird_first/bird_first_view.dart';
+import 'package:bird_project/pages/bird_first/game/game_binding.dart';
+import 'package:bird_project/pages/bird_first/game/game_view.dart';
+import 'package:bird_project/pages/bird_first/game/tool.dart';
+import 'package:bird_project/pages/bird_first/game_records/game_records_binding.dart';
+import 'package:bird_project/pages/bird_first/game_records/game_records_view.dart';
+import 'package:bird_project/pages/bird_first/game_set/game_set_binding.dart';
+import 'package:bird_project/pages/bird_first/game_set/game_set_view.dart';
+import 'package:bird_project/pages/bird_second/bird_second_binding.dart';
+import 'package:bird_project/pages/bird_second/bird_second_view.dart';
+import 'package:bird_project/pages/bird_set/bird_set_binding.dart';
+import 'package:bird_project/pages/bird_set/bird_set_view.dart';
+import 'package:bird_project/pages/bird_tab/bird_tab_binding.dart';
+import 'package:bird_project/pages/bird_tab/bird_tab_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,8 +33,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      getPages: BirdPages.list,
-      initialRoute: BirdNames.birdTab,
+      getPages: PageLists,
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -72,3 +85,13 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+List<GetPage<dynamic>> PageLists = [
+  GetPage(name: '/', page: () => const BirdSetView(), binding: BirdSetBinding()),
+  GetPage(name: '/bird_tab', page: () => BirdTabPage(), binding: BirdTabBinding()),
+  GetPage(name: '/bird_first', page: () => BirdFirstPage(), binding: BirdFirstBinding()),
+  GetPage(name: '/bird_second', page: () => BirdSecondPage(), binding: BirdSecondBinding()),
+  GetPage(name: '/bird_tool', page: () => const BirdTool()),
+  GetPage(name: '/bird_game', page: () => GamePage(),binding: GameBinding()),
+  GetPage(name:'/bird_game_set', page: () => GameSetPage(),binding: GameSetBinding()),
+  GetPage(name: '/bird_game_records', page: () => GameRecordsPage(),binding: GameRecordsBinding()),
+];

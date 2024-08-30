@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-import '../../../router/bird_names.dart';
 import 'game_set_logic.dart';
 
 class GameSetPage extends GetView<GameSetLogic> {
@@ -129,7 +128,7 @@ class GameSetPage extends GetView<GameSetLogic> {
                             end: Alignment.bottomCenter),
                         borderRadius: BorderRadius.circular(15))
                     .gestures(onTap: () {
-                  Get.toNamed(BirdNames.birdGame, arguments: 0, parameters: {
+                  Get.toNamed('/bird_game', arguments: 0, parameters: {
                     'duration': controller.duration.value.toString(),
                     'count': controller.count.value.toString()
                   });

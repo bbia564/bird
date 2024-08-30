@@ -1,4 +1,3 @@
-import 'package:bird_project/router/bird_names.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:styled_widget/styled_widget.dart';
@@ -11,7 +10,6 @@ class BirdSecondPage extends GetView<BirdSecondLogic> {
     final titles = [
       'Game records',
       'Clean all records',
-      'Privacy agreement',
       'About US'
     ];
     return Container(
@@ -28,15 +26,12 @@ class BirdSecondPage extends GetView<BirdSecondLogic> {
     ).gestures(onTap: () {
       switch (index) {
         case 0:
-          Get.toNamed(BirdNames.birdGameRecords);
+          Get.toNamed('/bird_game_records');
           break;
         case 1:
           controller.cleanAllRecords();
           break;
         case 2:
-          controller.aboutPrivacy(context);
-          break;
-        case 3:
           controller.aboutUS(context);
           break;
       }
@@ -62,7 +57,6 @@ class BirdSecondPage extends GetView<BirdSecondLogic> {
                     _item(0, context),
                     _item(1, context),
                     _item(2, context),
-                    _item(3, context),
                   ].toColumn(
                       separator: Divider(
                         height: 15,

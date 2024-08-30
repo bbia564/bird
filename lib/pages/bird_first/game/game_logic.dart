@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:bird_project/db_bird/bird_entity.dart';
 import 'package:bird_project/db_bird/db_bird.dart';
-import 'package:bird_project/router/bird_names.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:styled_widget/styled_widget.dart';
@@ -121,7 +120,7 @@ class GameLogic extends GetxController {
           }),
           TextButton(
             onPressed: () {
-              Get.until((route) => Get.currentRoute == BirdNames.birdGameSet);
+              Get.until((route) => Get.currentRoute == '/bird_game_set');
             },
             child: const Text(
               'Quit',

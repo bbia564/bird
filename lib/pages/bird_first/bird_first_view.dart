@@ -1,4 +1,3 @@
-import 'package:bird_project/router/bird_names.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:styled_widget/styled_widget.dart';
@@ -43,10 +42,10 @@ class BirdFirstPage extends GetView<BirdFirstLogic> {
         .gestures(onTap: () {
       switch (index) {
         case 0:
-          Get.toNamed(BirdNames.birdGameSet);
+          Get.toNamed('/bird_game_set');
           break;
         case 1:
-          Get.toNamed(BirdNames.birdGame,arguments: 1);
+          Get.toNamed('/bird_game',arguments: 1);
           break;
       }
     });
