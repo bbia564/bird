@@ -10,18 +10,18 @@ class BirdSecondPage extends GetView<BirdSecondLogic> {
     final titles = [
       'Game records',
       'Clean all records',
-      'About US'
+      'Version'
     ];
     return Container(
       color: Colors.transparent,
       height: 40,
       child: <Widget>[
         Text(titles[index],style:const TextStyle(color: Colors.white),),
-        const Icon(
+        index != 2 ? const Icon(
           Icons.keyboard_arrow_right,
           size: 20,
           color: Colors.grey,
-        )
+        ) : Text('1.0.0',style: const TextStyle(color: Colors.white),).padding(right: 10)
       ].toRow(mainAxisAlignment: MainAxisAlignment.spaceBetween),
     ).gestures(onTap: () {
       switch (index) {
@@ -30,9 +30,6 @@ class BirdSecondPage extends GetView<BirdSecondLogic> {
           break;
         case 1:
           controller.cleanAllRecords();
-          break;
-        case 2:
-          controller.aboutUS(context);
           break;
       }
     });

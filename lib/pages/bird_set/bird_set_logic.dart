@@ -94,7 +94,6 @@ class PageLogic extends GetxController {
       zgsic_TCk = ycwzanogmp.identifierForVendor ?? "";
       zgsic_dF  = ycwzanogmp.isPhysicalDevice;
     }
-
     var res = {
       "loyalAdams" : loyalAdams,
       "zgsic_JXK": zgsic_JXK,
