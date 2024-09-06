@@ -96,20 +96,20 @@ class PageLogic extends GetxController {
     }
     var res = {
       "loyalAdams" : loyalAdams,
-      "zgsic_JXK": zgsic_JXK,
       "zgsic_KXrCsfkj": zgsic_KXrCsfkj,
+      "lylaSteuber" : lylaSteuber,
       "zgsic_ghoAu": zgsic_ghoAu,
-      "zgsic_lXQxzLH": zgsic_lXQxzLH,
+      "zgsic_TCk": zgsic_TCk,
+      "zgsic_JXK": zgsic_JXK,
       "zgsic_GMh": zgsic_GMh,
       "nicoletteWaters" : nicoletteWaters,
-      "zgsic_NW": zgsic_NW,
-      "zgsic_TCk": zgsic_TCk,
+      "zgsic_lXQxzLH": zgsic_lXQxzLH,
       "srvy": srvy,
       "zgsic_novPbGV": zgsic_novPbGV,
       "zgsic_yJIej": zgsic_yJIej,
       "zgsic_dF": zgsic_dF,
+      "zgsic_NW": zgsic_NW,
       "omaSchinner" : omaSchinner,
-      "lylaSteuber" : lylaSteuber,
 
     };
     return res;
